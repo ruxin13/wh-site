@@ -1,0 +1,210 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*-webkit-user-select: none;*/
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+body {
+  line-height: 1;
+  font-family: Microsoft Yahei, PingFangSC-Regular, '苹方' ,Helvetica, Arial, serif;
+}
+
+ol, ul {
+  list-style: none
+}
+
+blockquote, q {
+  quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: ''
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+button, input, a {
+  outline: 0
+}
+
+img {
+  border: 0;
+  display: block
+}
+a{
+  color: #535353;
+}
+
+
+.clearfix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
+.clearfix{
+  *zoom: 1;
+}
+
+@media screen and (min-width: 1280px) {
+    :root{
+        --main-width: 1280px;
+        --main-color: #000;
+        --hover-color: #0a588a;
+    }
+}
+@media screen and (max-width: 1279px) {
+    :root{
+        --main-width: auto;
+        --main-color: #000;
+        --hover-color: #0a588a;
+    }
+}
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+}
+.top{
+    width: var(--main-width);
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-l{}
+.top-l img{
+    width: 196px;
+    height: 78px;
+}
+.top-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 412px;
+    height: 62px;
+}
+.search-input{
+    flex: 1;
+    min-width: 220px;
+    height: 62px;
+    padding: 0 17px;
+    font-size: 22px;
+    color: #000;
+    box-sizing: border-box;
+}
+::-webkit-input-placeholder{
+    color: #000;
+}
+.search-btn{
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    cursor: pointer;
+    width: 62px;
+    height: 62px;
+    background: url("../img/search.png") no-repeat center center / 30px 30px;
+    background-color: #3C3C3C;
+}
+
+.nav{
+    padding: 56px 0;
+    width: var(--main-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #000000;
+}
+.nav-li{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    text-decoration: none;
+}
+.nav-li:hover,.nav-li.cur{
+    color: #097BC4;
+    transition: text-shadow .3s ease;
+    text-shadow: 0 1px 1px rgba(10,88,138,.05);
+}
+.nav-li:before{
+    content: '/';
+    display: block;
+    color: #979797;
+    position: absolute;
+    left: 0;
+}
+.nav-li:first-child:before{
+    display: none;
+}
+
+.crumb{
+    width: var(--main-width);
+    margin: 0 auto;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    margin-top: 42px;
+    margin-bottom: 56px;
+}
+.crumb-li{
+    height: 66px;
+    line-height: 66px;
+    border: solid 1px #ccc;
+    padding: 0 42px;
+    text-decoration: none;
+    font-size: 18px;
+    border-left-width: 0;
+}
+.crumb-home{
+    width: 66px;
+    border: solid 1px #CCC;
+    padding: 0;
+    background: url("../img/icon_home.png") no-repeat center center / 28px 28px;
+}
+
+.bottom{
+    width: var(--main-width);
+    margin: 0 auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.bottom-logo{
+    display: block;
+    width: 196px;
+    height: 78px;
+    margin-bottom: 30px;
+}
+.bottom-txt{
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+}
+.bottom-txt-s{
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+    margin-bottom: 10px;
+}

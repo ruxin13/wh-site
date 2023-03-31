@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    {template "content","head"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}business.css" />
+</head>
+<body>
+
+<div class="container">
+    {template "content","top"}
+    <div class="fb">
+        <div class="fb-wrap">
+            <div class="fb-tit">{$CATEGORYS[$catid][catname]}</div>
+        </div>
+    </div>
+
+    <div class="crumb">
+        <a class="crumb-li crumb-home" href="/"></a>
+        <a class="crumb-li" href="javascript:">{$CATEGORYS[$catid][catname]}</a>
+    </div>
+
+    <div class="bc">
+        <div class="bc-txt">
+            <div class="bc-tit">TWS耳机</div>
+            <div class="bc-des">
+                <p>思远半导体SOC一体单芯片设计解决方案</p>
+                <p>TWS充电仓无线接收解决方案</p>
+                <p>MCU+思远电源IC个性化设计充电仓解决方案</p>
+            </div>
+        </div>
+        <img class="bc-img" src="{IMG_PATH_NEW}b_1.png" alt />
+    </div>
+
+    <div class="bc">
+        <img class="bc-img" src="{IMG_PATH_NEW}b_2.png" alt />
+        <div class="bc-txt bc-r">
+            <div class="bc-tit">移动电源方案设计开发</div>
+            <div class="bc-des">
+                <p>DCDC电源管理类解决方案</p>
+                <p>玩具类方案的电源设计及开发</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bc">
+        <div class="bc-txt">
+            <div class="bc-tit">小风扇、电动牙刷、加湿器，冲牙器等消费类</div>
+            <div class="bc-des">
+                <p>电动牙刷、玩具等无线接收开发方案</p>
+                <p>小风扇、加湿器等快消类产品的设计及开发</p>
+                <p>玩具类方案的电源设计及开发</p>
+            </div>
+        </div>
+        <img class="bc-img" src="{IMG_PATH_NEW}b_3.png" alt />
+    </div>
+
+    <div class="bc">
+        <img class="bc-img" src="{IMG_PATH_NEW}b_4.png" alt />
+        <div class="bc-txt bc-r">
+            <div class="bc-tit">LED驱动方案设计与开发</div>
+            <div class="bc-des">
+                <p>LED智能照明电源解决方案</p>
+                <p>两轮电动车，汽车类LED照明电源解决方案</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {template "content","bottom"}
+</div>
+
+<script src="{JS_PATH_NEW}require.js" data-main="{JS_PATH_NEW}business"></script>
+<script>
+    require(['business', 'common'], function (modal, common) {
+        common.stage() === "mobile" ? modal.mInit() : modal.init();
+    });
+</script>
+</body>
+</html>

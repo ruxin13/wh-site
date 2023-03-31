@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    {template "content","head"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}product.css" />
+</head>
+<body>
+
+<div class="container">
+    {template "content","top"}
+    <div class="fb">
+        <div class="fb-wrap">
+            <div class="fb-tit">{$CATEGORYS[$catid][catname]}</div>
+        </div>
+    </div>
+
+    <div class="crumb">
+        <a class="crumb-li crumb-home" href="/"></a>
+        <a class="crumb-li" href="javascript:">{$CATEGORYS[$catid][catname]}</a>
+        <div class="crumb-s">
+            <div class="crumb-select">欧创芯 中低压LED恒流驱动芯片</div>
+            <div class="crumb-list" style="display: none">
+                <div class="crumb-sli">思远 TWS充电仓电源管理芯片</div>
+                <div class="crumb-sli">思远 OVP/OCP 芯片</div>
+                <div class="crumb-sli">思远 锂电池充电管理芯片</div>
+                <div class="crumb-sli">创芯微 锂电池保护芯片</div>
+                <div class="crumb-sli">欧创芯 中低压LED恒流驱动芯片</div>
+                <div class="crumb-sli">霍尔开关芯片</div>
+                <div class="crumb-sli">无线充接收芯片</div>
+                <div class="crumb-sli">欧创芯功率管驱动器</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="v-list">
+        <div class="vli">
+            <div class="vli-tit">LED Driver DC-DC降压恒流系列</div>
+            <table class="v-table">
+                <tr class="v-thead">
+                    <th class="v-td">产品型号</th>
+                    <th class="v-td">封装</th>
+                    <th class="v-td">输入电压<br/>范围</th>
+                    <th class="v-td">输出电压<br/>范围</th>
+                    <th class="v-td">输入电流<br/>范围</th>
+                    <th class="v-td">输出功率<br/>范围</th>
+                    <th class="v-td">驱动方式</th>
+                    <th class="v-td">效率</th>
+                    <th class="v-td">工作模式/<br/>频率</th>
+                    <th class="v-td">电流采样<br/>方式</th>
+                    <th class="v-td">调光功能</th>
+                    <th class="v-td">VCS</th>
+                </tr>
+                <tr class="v-tbody"><td>OC5021B</td><td>SOT23-6</td><td>3.1～150V</td><td>≥Vi+1V</td><td>≤5A</td><td>≤40W</td><td>外置MOS</td><td>最大95%</td><td>固定Toff/频率可调</td><td>峰值电流采样</td><td>PWM/线性调光</td><td>250mV</td></tr>
+                <tr class="v-tbody"><td>OC5021B</td><td>SOT23-6</td><td>3.1～150V</td><td>≥Vi+1V</td><td>≤5A</td><td>≤40W</td><td>外置MOS</td><td>最大95%</td><td>固定Toff/频率可调</td><td>峰值电流采样</td><td>PWM/线性调光</td><td>250mV</td></tr>
+                <tr class="v-tbody"><td>OC5021B</td><td>SOT23-6</td><td>3.1～150V</td><td>≥Vi+1V</td><td>≤5A</td><td>≤40W</td><td>外置MOS</td><td>最大95%</td><td>固定Toff/频率可调</td><td>峰值电流采样</td><td>PWM/线性调光</td><td>250mV</td></tr>
+                <tr class="v-tbody"><td>OC5021B</td><td>SOT23-6</td><td>3.1～150V</td><td>≥Vi+1V</td><td>≤5A</td><td>≤40W</td><td>外置MOS</td><td>最大95%</td><td>固定Toff/频率可调</td><td>峰值电流采样</td><td>PWM/线性调光</td><td>250mV</td></tr>
+                <tr class="v-tbody"><td>OC5021B</td><td>SOT23-6</td><td>3.1～150V</td><td>≥Vi+1V</td><td>≤5A</td><td>≤40W</td><td>外置MOS</td><td>最大95%</td><td>固定Toff/频率可调</td><td>峰值电流采样</td><td>PWM/线性调光</td><td>250mV</td></tr>
+            </table>
+        </div>
+    </div>
+
+    {template "content","bottom"}
+</div>
+
+<script src="{JS_PATH_NEW}require.js" data-main="{JS_PATH_NEW}product"></script>
+<script>
+    require(['product', 'common'], function (modal, common) {
+        common.stage() === "mobile" ? modal.mInit() : modal.init();
+    });
+</script>
+</body>
+</html>

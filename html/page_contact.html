@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    {template "content","head"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}contact.css" />
+</head>
+<body>
+
+<div class="container">
+    {template "content","top"}
+
+    <div class="fb">
+        <div class="fb-wrap">
+            <div class="fb-tit">{$CATEGORYS[$catid][catname]}</div>
+        </div>
+    </div>
+
+    <div class="crumb">
+        <a class="crumb-li crumb-home" href="/"></a>
+        <a class="crumb-li" href="javascript:">{$CATEGORYS[$catid][catname]}</a>
+    </div>
+
+    <div class="c1">
+        <div class="cb-tit">联系我们</div>
+        <div class="cb-con">
+            <div class="c1-tit">深圳市威航创展科技有限公司</div>
+            <div class="c1-con">
+                <div class="c1-map" id="mapWrap"></div>
+                <div class="c1-adr">
+                    <div class="c1-rt">总部地址</div>
+                    <div class="c1-rc">深圳市宝安区宝源路与固戍一路交汇处宝港中心A座7003号</div>
+                    <div class="c1-rt">联系电话</div>
+                    <div class="c1-rc">0755-27800904</div>
+                    <div class="c1-rt">联系手机</div>
+                    <div class="c1-rc">13528745394</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c2">
+        <div class="cb-tit">客户留言</div>
+        <div class="c2-row">
+            <label class="c2-li required">
+                <span class="c2-mt">姓名</span>
+                <input class="c2-input" type="text" placeholder="" maxlength="36" />
+            </label>
+            <label class="c2-li required">
+                <span class="c2-mt">手机</span>
+                <input class="c2-input" type="tel" placeholder="" maxlength="16" />
+            </label>
+        </div>
+        <div class="c2-row">
+            <label class="c2-li">
+                <span class="c2-mt">企业名称</span>
+                <input class="c2-input" type="text" placeholder="" maxlength="36" />
+            </label>
+            <label class="c2-li required">
+                <span class="c2-mt">电子邮箱</span>
+                <input class="c2-input" type="tel" placeholder="" maxlength="36" />
+            </label>
+        </div>
+        <button class="c2-submit">提交</button>
+    </div>
+
+    {template "content","bottom"}
+</div>
+
+<script src="{JS_PATH_NEW}require.js" data-main="{JS_PATH_NEW}contact"></script>
+<script>
+    require(['contact', 'common'], function (modal, common) {
+        common.stage() === "mobile" ? modal.mInit() : modal.init();
+    });
+</script>
+</body>
+</html>

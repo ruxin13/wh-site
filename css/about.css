@@ -1,0 +1,159 @@
+.fb{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    background: url("../img/about_banner.png") no-repeat center center / 1920px 300px;
+}
+.fb-wrap{
+    height: 100%;
+    width: var(--main-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.fb-tit{
+    font-size: 40px;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 56px;
+    letter-spacing: 1px;
+}
+.a1{
+    width: var(--main-width);
+    margin: 0 auto 69px;
+}
+.ab-tit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+}
+.ab-tit:before{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 36px;
+    background: linear-gradient(180deg, #5077FF 0%, #1A84C8 100%);
+    border-radius: 4px;
+    margin-right: 16px;
+}
+.ab-con{
+    display: flex;
+}
+.a2 .ab-con{
+    flex-wrap: wrap;
+}
+.a1-l{
+    flex: 1;
+    min-width: 550px;
+}
+.a1-r{
+    width: 653px;
+    height: 346px;
+    margin-left: 58px;
+}
+.a1-lt{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 56px;
+    margin-top: 32px;
+    margin-bottom: 36px;
+}
+.a1-lc{
+    font-size: 20px;
+    color: #333333;
+    line-height: 38px;
+}
+
+.a2,.a3,.a4,.a5{
+    width: var(--main-width);
+    margin: 0 auto 56px;
+}
+.a2-li{
+    width: 212px;
+    position: relative;
+    margin-right: 55px;
+}
+.a2-li:after{
+    content:'';
+    display: block;
+    width: 31px;
+    height: 31px;
+    background: url("../img/a2_dot.png") no-repeat center center / 100% 100%;
+    position: absolute;
+    right: -45px;
+    top: 64px;
+}
+.a2-li:last-child{
+    margin-right: 0;
+}
+.a2-li:last-child:after{
+    display: none;
+}
+.a2-lt{
+    font-size: 38px;
+    color: #235ABE;
+    line-height: 50px;
+    background: linear-gradient(180deg, #5077FF 0%, #1A84C8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.a2-lc{
+    height: 31px;
+    margin-bottom: 20px;
+}
+.a2-lb{
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+}
+.a3 .ab-con{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.a3-li{
+    width: 628px;
+    height: 227px;
+    display: block;
+    margin-bottom: 20px;
+}
+.a3-li img{
+    width: 100%;
+    height: 100%;
+}
+.a4 .ab-con{
+    flex-wrap: wrap;
+}
+.a4-li{
+    display: block;
+    width: 235px;
+    height: 200px;
+    margin-right: 26px;
+    margin-bottom: 20px;
+}
+.a4-li img{
+    width: 100%;
+    height: 100%;
+}
+.a4-li:last-child{
+    margin-right: 0;
+}
+
+.a5 .ab-con{
+    flex-wrap: wrap;
+}
+.a5-li{
+    display: block;
+    width: 240px;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 29px;
+}
+.a5 .ab-con .a5-li:nth-child(5n){
+    margin-right: 0;
+}
+.a5-li img{
+    width: 100%;
+    height: 100%;
+}
