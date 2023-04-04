@@ -4,7 +4,7 @@
     <meta name="keywords" content="{$SEO['keyword']}">
     <meta name="description" content="{$SEO['description']}">
     {template "content","head"}
-    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}product.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}show_product.css" />
 </head>
 <body>
 
@@ -34,8 +34,9 @@
         </div>
     </div>
 
-
-    <!--    <li><p><a href="{$r[url]}" title="{$r[title]}" target="_blank">{$r[title]}</a></p>魔客吧：{$r[phpcms123]}</li>-->
+    {pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page" moreinfo="1"}
+    {loop $data $r}
+<!--    <li><p><a href="{$r[url]}" title="{$r[title]}" target="_blank">{$r[title]}</a></p>魔客吧：{$r[phpcms123]}</li>-->
     <div class="v-list">
         <div class="vli">
             <div class="vli-tit">LED Driver DC-DC降压恒流系列</div>
@@ -69,14 +70,15 @@
             </table>
         </div>
     </div>
-
+    {/loop}
+    {/pc}
 
     {template "content","bottom"}
 </div>
 
-<script src="{JS_PATH_NEW}require.js" data-main="{JS_PATH_NEW}product"></script>
+<script src="{JS_PATH_NEW}require.js" data-main="{JS_PATH_NEW}show_product"></script>
 <script>
-    require(['product', 'common'], function (modal, common) {
+    require(['show_product', 'common'], function (modal, common) {
         common.stage() === "mobile" ? modal.mInit() : modal.init();
     });
 </script>

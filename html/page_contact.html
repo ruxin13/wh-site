@@ -42,27 +42,29 @@
 
     <div class="c2">
         <div class="cb-tit">客户留言</div>
-        <div class="c2-row">
-            <label class="c2-li required">
-                <span class="c2-mt">姓名</span>
-                <input class="c2-input" type="text" placeholder="" maxlength="36" />
-            </label>
-            <label class="c2-li required">
-                <span class="c2-mt">手机</span>
-                <input class="c2-input" type="tel" placeholder="" maxlength="16" />
-            </label>
-        </div>
-        <div class="c2-row">
-            <label class="c2-li">
-                <span class="c2-mt">企业名称</span>
-                <input class="c2-input" type="text" placeholder="" maxlength="36" />
-            </label>
-            <label class="c2-li required">
-                <span class="c2-mt">电子邮箱</span>
-                <input class="c2-input" type="tel" placeholder="" maxlength="36" />
-            </label>
-        </div>
-        <button class="c2-submit">提交</button>
+        <form method="post" action="?m=formguide&c=index&a=show&formid=46&siteid=1" name="myform" id="myform">
+            <div class="c2-row">
+                <label class="c2-li required">
+                    <span class="c2-mt">姓名</span>
+                    <input class="c2-input" type="text" placeholder="" maxlength="36" name="info[z_name]" id="z_name" value=""  />
+                </label>
+                <label class="c2-li required">
+                    <span class="c2-mt">手机</span>
+                    <input class="c2-input" type="tel" placeholder="" maxlength="16" name="info[z_phone]" id="z_phone" />
+                </label>
+            </div>
+            <div class="c2-row">
+                <label class="c2-li">
+                    <span class="c2-mt">企业名称</span>
+                    <input class="c2-input" type="text" placeholder="" maxlength="36" name="info[z_company]" id="z_company" />
+                </label>
+                <label class="c2-li">
+                    <span class="c2-mt">电子邮箱</span>
+                    <input class="c2-input" type="tel" placeholder="" maxlength="36" name="info[z_email]" id="z_email" />
+                </label>
+            </div>
+            <input class="c2-submit" type="submit" name="dosubmit" id="dosubmit" value=" 提交 ">
+        </form>
     </div>
 
     {template "content","bottom"}
@@ -74,5 +76,6 @@
         common.stage() === "mobile" ? modal.mInit() : modal.init();
     });
 </script>
+<script language='javascript' src='{APP_PATH}index.php?m=formguide&c=index&a=show&formid=46&action=js&siteid=1'></script>
 </body>
 </html>

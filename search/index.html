@@ -1,0 +1,23 @@
+{template 'search', 'header'}
+<div class="container">
+    {template "content","top"}
+    <div class="fb">
+        <div class="fb-wrap">
+            <!--            <div class="fb-tit">{$CATEGORYS[$catid][catname]}</div>-->
+        </div>
+    </div>
+
+    <div class="crumb">
+        <a class="crumb-li crumb-home" href="/"></a>
+        <a class="crumb-li" href="javascript:">搜索</a>
+    </div>
+    {template "content","bottom"}
+</div>
+<script src="{JS_PATH_NEW}require.js" data-main="{JS_PATH_NEW}product"></script>
+<script>
+    require(['product', 'common'], function (modal, common) {
+        common.stage() === "mobile" ? modal.mInit() : modal.init();
+    });
+</script>
+</body>
+</html>
