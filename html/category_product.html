@@ -16,6 +16,8 @@
         </div>
     </div>
 
+    <div></div>
+    
     <div class="crumb">
         <a class="crumb-li crumb-home" href="/"></a>
         <a class="crumb-li" href="javascript:">{$CATEGORYS[$catid][catname]}</a>
@@ -35,7 +37,7 @@
             <div class="vli-tit" id="m13">思远TWS充电仓电源管理芯片</div>
             <table class="v-table">
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=13 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=13 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -55,7 +57,7 @@
             <div class="vli-tit" id="m14">思远OVP/OCP芯片</div>
             <table class="v-table">
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=14 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=14 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -75,7 +77,7 @@
             <div class="vli-tit" id="m15">思远锂电池充电管理芯片</div>
             <table class="v-table">
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=15 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=15 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -96,7 +98,7 @@
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="9">智能穿戴设备电池保护芯片</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=16 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=16 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -114,7 +116,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="10">3-4节电池保护芯片</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=17 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=17 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -130,7 +132,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="10">4-7节电池保护芯片</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=18 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=18 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -146,7 +148,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="10">10、13、14节电池保护芯片</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=19 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=19 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -165,7 +167,7 @@
             <div class="vli-tit" id="m20">霍尔开关芯片</div>
             <table class="v-table">
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=20 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=20 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -184,7 +186,7 @@
             <div class="vli-tit" id="m21">无线充接收芯片</div>
             <table class="v-table">
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=21 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=21 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -204,7 +206,7 @@
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC升压恒流系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=22 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=22 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -220,13 +222,13 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC降压恒流系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=23 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=23 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gb_xh,gb_fz,gb_srdy,gb_scdy,gb_srdl,gb_scgl,gb_qdfs,gb_xl,gb_gzms,gb_dlcy,gb_tggl,gb_vcs from v9_cp_gb_data"}
+                {pc:get sql="select gb_xh,gb_fz,gb_srdy,gb_scdy,gb_srdl,gb_scgl,gb_qdfs,gb_xl,gb_gzms,gb_dlcy,gb_tggl,gb_vcs from v9_cp_gb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[gb_xh]}</td><td>{$r[gb_fz]}</td><td>{$r[gb_srdy]}</td><td>{$r[gb_scdy]}</td><td>{$r[gb_srdl]}</td><td>{$r[gb_scgl]}</td><td>{$r[gb_qdfs]}</td><td>{$r[gb_xl]}</td><td>{$r[gb_gzms]}</td><td>{$r[gb_dlcy]}</td><td>{$r[gb_tggl]}</td><td>{$r[gb_vcs]}</td></tr>
                 {/loop}
@@ -236,7 +238,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">同步开关降压 LED Driver DC-DC降压恒流系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=24 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=24 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -265,7 +267,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC 升降压恒流系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=26 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=26 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -294,7 +296,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver 线性恒流驱动芯片系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=28 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=28 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -322,7 +324,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC降压恒流专用IC系列：多功能LED手电筒专用芯片</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=29 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=29 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -353,7 +355,7 @@
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="12">DC-DC降压恒压系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=30 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=30 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -382,7 +384,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">DC-DC升压恒压系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=31 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=31 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -410,7 +412,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="11">超低功耗DC-DC 升压恒压系列</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=33 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=33 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -443,7 +445,7 @@
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="12">低功耗高耐压电压稳压器</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=34 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=34 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -475,7 +477,7 @@
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="11">功率管驱动器</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=35 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=35 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -502,7 +504,7 @@
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="11">3.6A 刷式直流电机驱动器</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=36 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=36 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -533,7 +535,7 @@
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="9">单按键触摸检测芯片</th></tr>
                 <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=37 and listorder<99 order by listorder"}
+                    {pc:get sql="select name from v9_model_field where modelid=37 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
                     <th class="v-td">{$r[name]}</th>
                     {/loop}
@@ -555,6 +557,65 @@
                 {/loop}
                 {/pc}
             </table>
+        </div>
+
+        <div class="vli">
+            <div class="vli-tit" id="m50">欧创芯电芯保护IC/MCU</div>
+            <table class="v-table">
+                <tr class="vli-stit"><th colspan="10">电芯保护IC</th></tr>
+                <tr class="v-thead">
+                    {pc:get sql="select name from v9_model_field where modelid=48 and listorder<99 and listorder>0 order by listorder"}
+                    {loop $data $r}
+                    <th class="v-td">{$r[name]}</th>
+                    {/loop}
+                    {/pc}
+                </tr>
+                {pc:get sql="select l_xh,l_fz,l_srdy,l_djdl,l_gzdl,l_rdson,l_gfdl,l_gfdy,l_gfdsf,l_gwbh from v9_pc_l_data"}
+                {loop $data $r}
+                <tr class="v-tbody">
+                    <td>{$r[l_xh]}</td>
+                    <td>{$r[l_fz]}</td>
+                    <td>{$r[l_srdy]}</td>
+                    <td>{$r[l_djdl]}</td>
+                    <td>{$r[l_gzdl]}</td>
+                    <td>{$r[l_rdson]}</td>
+                    <td>{$r[l_gfdl]}</td>
+                    <td>{$r[l_gfdy]}</td>
+                    <td>{$r[l_gfdsf]}</td>
+                    <td>{$r[l_gwbh]}</td>
+                </tr>
+                {/loop}
+                {/pc}
+            </table>
+
+            <table class="v-table" style="margin-top: 10px">
+                <tr class="vli-stit"><th colspan="11">8位MCU</th></tr>
+                <tr class="v-thead">
+                    {pc:get sql="select name from v9_model_field where modelid=49 and listorder<99 and listorder>0 order by listorder"}
+                    {loop $data $r}
+                    <th class="v-td">{$r[name]}</th>
+                    {/loop}
+                    {/pc}
+                </tr>
+                {pc:get sql="select lb_xh,lb_fz,lb_gzdyfw,lb_ccq,lb_sjcl,lb_io,lb_yxsd,lb_kmg,lb_fwgn,lb_jtdl,lb_gzdl from v9_pc_lb_data"}
+                {loop $data $r}
+                <tr class="v-tbody">
+                    <td>{$r[lb_xh]}</td>
+                    <td>{$r[lb_fz]}</td>
+                    <td>{$r[lb_gzdyfw]}</td>
+                    <td>{$r[lb_ccq]}</td>
+                    <td>{$r[lb_sjcl]}</td>
+                    <td>{$r[lb_io]}</td>
+                    <td>{$r[lb_yxsd]}</td>
+                    <td>{$r[lb_kmg]}</td>
+                    <td>{$r[lb_fwgn]}</td>
+                    <td>{$r[lb_jtdl]}</td>
+                    <td>{$r[lb_gzdl]}</td>
+                </tr>
+                {/loop}
+                {/pc}
+            </table>
+
         </div>
 
 
