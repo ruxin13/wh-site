@@ -46,6 +46,9 @@ img {
 a{
   color: #535353;
 }
+.fm{
+    display: none;
+}
 
 
 .clearfix:after{

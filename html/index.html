@@ -4,6 +4,8 @@
     <meta name="keywords" content="{$SEO['keyword']}">
     <meta name="description" content="{$SEO['description']}">
     {template "content","head"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}reset.css?v={php echo time()}" media="screen and (min-width:1000px)" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}reset_m.css?v={php echo time()}" media="screen and (max-width:999px)" />
     <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}index.css?v={php echo time()}" media="screen and (min-width:1000px)" />
     <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}index_m.css?v={php echo time()}" media="screen and (max-width:999px)" />
     <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}animate.css" />
@@ -13,11 +15,21 @@
 
 <div class="container">
     {template "content","top"}
-    <div class="banner">
+    <div class="banner fp">
         <div class="swiper-container banner-container">
             <div class="swiper-wrapper">
                 <a class="swiper-slide" href="javascript:"><img class="slide-img" src="{IMG_PATH_NEW}banner01.png" alt /></a>
-<!--                <a class="swiper-slide" href="javascript:"><img class="slide-img" src="{IMG_PATH_NEW}banner01.png" alt /></a>-->
+            </div>
+        </div>
+    </div>
+    <div class="banner-m fm">
+        <div class="swiper-container banner-container-m">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="javascript:">
+                    <img class="slide-img" src="{IMG_PATH_NEW}m_banner01.png" alt />
+                    <div class="bs-tit">威航创展科技官网正式上线</div>
+                    <div class="bs-con">2023年1月1日正式上线</div>
+                </a>
             </div>
         </div>
     </div>

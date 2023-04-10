@@ -17,7 +17,17 @@ define(['jquery', 'wow'], function ($, WOW) {
         });
 
         $(".toggle-button").on("click", function () {
-            $(".nav").slideToggle();
+            var $this = $(this), _st = $this.data("st"), $nav = $(".nav");
+            if (~~_st) {
+                $nav.stop().slideUp();
+                $this.data("st", "0").addClass("btn-off").removeClass("btn-on");
+            } else {
+                $nav.stop().slideDown();
+                $this.data("st", "1").addClass("btn-on").removeClass("btn-off");
+            }
+        });
+        $(".toggle-search").on("click", function () {
+            console.log("search");
         });
 
         var wow = new WOW({

@@ -35,6 +35,12 @@ define(['flexible', 'jquery', 'swiper', 'wow', 'common', 'common_m'], function (
 
         common_m.bind();
 
+        var swiper2 = new Swiper('.banner-container-m', {
+            loop: true,
+            pagination: {
+                clickable :true,
+            },
+        });
 
     };
 
