@@ -43,7 +43,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select a_cpxh,a_ny,a_cdfs,a_cddl,a_fddl,a_fdgddl,a_led,a_ntc,a_gdms,a_fz,a_bz from v9_cp_a_data"}
+                {pc:get sql="select a_cpxh,a_ny,a_cdfs,a_cddl,a_fddl,a_fdgddl,a_led,a_ntc,a_gdms,a_fz,a_bz from v9_cp_a_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[a_cpxh]}</td><td>{$r[a_ny]}</td><td>{$r[a_cdfs]}</td><td>{$r[a_cddl]}</td><td>{$r[a_fddl]}</td><td>{$r[a_fdgddl]}</td><td>{$r[a_led]}</td><td>{$r[a_ntc]}</td><td>{$r[a_gdms]}</td><td>{$r[a_fz]}</td><td>{$r[a_bz]}</td>
@@ -63,7 +63,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select b_cpxh,b_ron,b_ovp,b_ovpm,b_ocp,b_ocpm,b_12v,b_20v,b_fz from v9_cp_b_data"}
+                {pc:get sql="select b_cpxh,b_ron,b_ovp,b_ovpm,b_ocp,b_ocpm,b_12v,b_20v,b_fz from v9_cp_b_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[b_cpxh]}</td><td>{$r[b_ron]}</td><td>{$r[b_ovp]}</td><td>{$r[b_ovpm]}</td><td>{$r[b_ocp]}</td><td>{$r[b_ocpm]}</td><td>{$r[b_12v]}</td><td>{$r[b_20v]}</td><td>{$r[b_fz]}</td>
@@ -83,7 +83,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select c_cpxh,c_srny,c_ovp,c_cddl,c_cdjz,c_cddyjd,c_bcdl,c_bcfoc,c_cdzt,c_ntc,c_dsgd,c_fz from v9_cp_c_data"}
+                {pc:get sql="select c_cpxh,c_srny,c_ovp,c_cddl,c_cdjz,c_cddyjd,c_bcdl,c_bcfoc,c_cdzt,c_ntc,c_dsgd,c_fz from v9_cp_c_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[c_cpxh]}</td><td>{$r[c_srny]}</td><td>{$r[c_ovp]}</td><td>{$r[c_cddl]}</td><td>{$r[c_cdjz]}</td><td>{$r[c_cddyjd]}</td><td>{$r[c_bcdl]}</td><td>{$r[c_bcfoc]}</td><td>{$r[c_cdzt]}</td><td>{$r[c_ntc]}</td><td>{$r[c_dsgd]}</td><td>{$r[c_fz]}</td>
@@ -104,7 +104,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select da_cpxh,da_gcbh,da_gcjc,da_gfbh,da_gfjc,da_fdjc,da_dljc,da_cddl,da_fz from v9_cp_d_data"}
+                {pc:get sql="select da_cpxh,da_gcbh,da_gcjc,da_gfbh,da_gfjc,da_fdjc,da_dljc,da_cddl,da_fz from v9_cp_d_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[da_cpxh]}</td><td>{$r[da_gcbh]}</td><td>{$r[da_gcjc]}</td><td>{$r[da_gfbh]}</td><td>{$r[da_gfjc]}</td><td>{$r[da_fdjc]}</td><td>{$r[da_dljc]}</td><td>{$r[da_cddl]}</td><td>{$r[da_fz]}</td>
@@ -122,7 +122,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select db_cpxh,db_gcdy,db_gcjc,db_gfbh,db_gfjc,db_fdgl1,db_fdgl2,db_dl,db_cddl,db_fz from v9_cp_db_data"}
+                {pc:get sql="select db_cpxh,db_gcdy,db_gcjc,db_gfbh,db_gfjc,db_fdgl1,db_fdgl2,db_dl,db_cddl,db_fz from v9_cp_db_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[db_cpxh]}</td><td>{$r[db_gcdy]}</td><td>{$r[db_gcjc]}</td><td>{$r[db_gfbh]}</td><td>{$r[db_gfjc]}</td><td>{$r[db_fdgl1]}</td><td>{$r[db_fdgl2]}</td><td>{$r[db_dl]}</td><td>{$r[db_cddl]}</td><td>{$r[db_fz]}</td></tr>
                 {/loop}
@@ -138,7 +138,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select dc_cpxh,dc_gcbh,dc_gcjc,dc_gfbh,dc_gfjc,dc_fddl1,dc_fddl2,dc_dl,dc_cddl,dc_fz from v9_cp_dc_data"}
+                {pc:get sql="select dc_cpxh,dc_gcbh,dc_gcjc,dc_gfbh,dc_gfjc,dc_fddl1,dc_fddl2,dc_dl,dc_cddl,dc_fz from v9_cp_dc_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[dc_cpxh]}</td><td>{$r[dc_gcbh]}</td><td>{$r[dc_gcjc]}</td><td>{$r[dc_gfbh]}</td><td>{$r[dc_gfjc]}</td><td>{$r[dc_fddl1]}</td><td>{$r[dc_fddl2]}</td><td>{$r[dc_dl]}</td><td>{$r[dc_cddl]}</td><td>{$r[dc_fz]}</td></tr>
                 {/loop}
@@ -154,7 +154,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select dd_cpxh,dd_gcbh,dd_gcjc,dd_gfbh,dd_gfjc,dd_fddl1,dd_fddl2,dd_dl,dd_cddl,dd_fz from v9_cp_dd_data"}
+                {pc:get sql="select dd_cpxh,dd_gcbh,dd_gcjc,dd_gfbh,dd_gfjc,dd_fddl1,dd_fddl2,dd_dl,dd_cddl,dd_fz from v9_cp_dd_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[dd_cpxh]}</td><td>{$r[dd_gcbh]}</td><td>{$r[dd_gcjc]}</td><td>{$r[dd_gfbh]}</td><td>{$r[dd_gfjc]}</td><td>{$r[dd_fddl1]}</td><td>{$r[dd_fddl2]}</td><td>{$r[dd_dl]}</td><td>{$r[dd_cddl]}</td><td>{$r[dd_fz]}</td></tr>
                 {/loop}
@@ -173,7 +173,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select e_cpxh,e_jx,e_opt,e_hys,e_fz from v9_cp_e_data"}
+                {pc:get sql="select e_cpxh,e_jx,e_opt,e_hys,e_fz from v9_cp_e_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[e_cpxh]}</td><td>{$r[e_jx]}</td><td>{$r[e_opt]}</td><td>{$r[e_hys]}</td><td>{$r[e_fz]}</td></tr>
                 {/loop}
@@ -192,7 +192,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select f_cpxh,f_ov,f_moc,f_mrp,f_qi,f_fz,f_bz from v9_cp_f_data"}
+                {pc:get sql="select f_cpxh,f_ov,f_moc,f_mrp,f_qi,f_fz,f_bz from v9_cp_f_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[f_cpxh]}</td><td>{$r[f_ov]}</td><td>{$r[f_moc]}</td><td>{$r[f_mrp]}</td><td>{$r[f_qi]}</td><td>{$r[f_fz]}</td><td>{$r[f_bz]}</td></tr>
                 {/loop}
@@ -212,7 +212,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select g_xh,g_fz,g_srdy,g_scdy,g_srdl,g_scgl,g_qdfs,g_xl,g_gzms,g_dlcy,g_tggl,g_vcs from v9_cp_g_data"}
+                {pc:get sql="select g_xh,g_fz,g_srdy,g_scdy,g_srdl,g_scgl,g_qdfs,g_xl,g_gzms,g_dlcy,g_tggl,g_vcs from v9_cp_g_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody"><td>{$r[g_xh]}</td><td>{$r[g_fz]}</td><td>{$r[g_srdy]}</td><td>{$r[g_scdy]}</td><td>{$r[g_srdl]}</td><td>{$r[g_scgl]}</td><td>{$r[g_qdfs]}</td><td>{$r[g_xl]}</td><td>{$r[g_gzms]}</td><td>{$r[g_dlcy]}</td><td>{$r[g_tggl]}</td><td>{$r[g_vcs]}</td></tr>
                 {/loop}
@@ -244,7 +244,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gc_xh,gc_fz,gc_srdy,gc_scdy,gc_srdl,gc_scgl,gc_qdfs,gc_xl,gc_gzms,gc_dlcy,gc_tggl,gc_vcs from v9_cp_gc_data"}
+                {pc:get sql="select gc_xh,gc_fz,gc_srdy,gc_scdy,gc_srdl,gc_scgl,gc_qdfs,gc_xl,gc_gzms,gc_dlcy,gc_tggl,gc_vcs from v9_cp_gc_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[gc_xh]}</td>
@@ -273,7 +273,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gd_xh,gd_fz,gd_srdy,gd_scdy,gd_srdl,gd_scgl,gd_qdfs,gd_xl,gd_gzms,gd_dlcy,gd_tggn,gd_vcs from v9_cp_gd_data"}
+                {pc:get sql="select gd_xh,gd_fz,gd_srdy,gd_scdy,gd_srdl,gd_scgl,gd_qdfs,gd_xl,gd_gzms,gd_dlcy,gd_tggn,gd_vcs from v9_cp_gd_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[gd_xh]}</td>
@@ -302,7 +302,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gh_xh,gh_fz,gh_srdy,gh_vod,gh_scdy,gh_scdl,gh_qdfs,gh_scgl,gh_xl,gh_fkdy,gh_tggn from v9_cp_gh_data"}
+                {pc:get sql="select gh_xh,gh_fz,gh_srdy,gh_vod,gh_scdy,gh_scdl,gh_qdfs,gh_scgl,gh_xl,gh_fkdy,gh_tggn from v9_cp_gh_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[gh_xh]}</td>
@@ -330,7 +330,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select ge_xh,ge_fz,ge_srdy,ge_scdy,ge_scdl,ge_scgl,ge_qdfs,ge_xl,ge_gzms,ge_dlcy,ge_tgfs from v9_cp_ge_data"}
+                {pc:get sql="select ge_xh,ge_fz,ge_srdy,ge_scdy,ge_scdl,ge_scgl,ge_qdfs,ge_xl,ge_gzms,ge_dlcy,ge_tgfs from v9_cp_ge_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[ge_xh]}</td>
@@ -361,7 +361,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select ha_xh,ha_fz,ha_srdy,ha_scdy,ha_scdl,ha_scgl,ha_qdfs,ha_xl,ha_gzms,ha_gzjg,ha_jtdl,ha_vfb from v9_cp_ha_data"}
+                {pc:get sql="select ha_xh,ha_fz,ha_srdy,ha_scdy,ha_scdl,ha_scgl,ha_qdfs,ha_xl,ha_gzms,ha_gzjg,ha_jtdl,ha_vfb from v9_cp_ha_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[ha_xh]}</td>
@@ -390,7 +390,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select hb_xh,hb_fz,hb_srdy,hb_scdy,hb_scdl,hb_scgl,hb_qdfs,hb_xl,hb_gzms,hb_fkdy,hb_jtdl from v9_cp_hb_data"}
+                {pc:get sql="select hb_xh,hb_fz,hb_srdy,hb_scdy,hb_scdl,hb_scgl,hb_qdfs,hb_xl,hb_gzms,hb_fkdy,hb_jtdl from v9_cp_hb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[hb_xh]}</td>
@@ -418,7 +418,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select hc_xh,hc_fz,hc_srdy,hc_scdy,hc_scfz,hc_tggn,hc_tbyb,hc_xl,hc_djgh,hc_scdywb,hc_scdyjd from v9_cp_hc_data"}
+                {pc:get sql="select hc_xh,hc_fz,hc_srdy,hc_scdy,hc_scfz,hc_tggn,hc_tbyb,hc_xl,hc_djgh,hc_scdywb,hc_scdyjd from v9_cp_hc_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[hc_xh]}</td>
@@ -451,7 +451,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select i_xh,i_fz,i_srdy,i_scdy,i_dtyj,i_scdl,i_jtdl,i_psrr,i_bhgn,i_scdywb,i_scdyjd from v9_cp_i_data"}
+                {pc:get sql="select i_xh,i_fz,i_srdy,i_scdy,i_dtyj,i_scdl,i_jtdl,i_psrr,i_bhgn,i_scdywb,i_scdyjd from v9_cp_i_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[i_xh]}</td>
@@ -483,7 +483,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select j_xh,j_fz,j_srdy,j_bst,j_sssj,j_xjsj,j_snkq,j_sngd,j_ycsj,j_snkz,j_qdfs from v9_cp_j_data"}
+                {pc:get sql="select j_xh,j_fz,j_srdy,j_bst,j_sssj,j_xjsj,j_snkq,j_sngd,j_ycsj,j_snkz,j_qdfs from v9_cp_j_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[j_xh]}</td>
@@ -510,7 +510,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select jb_xh,jb_fz,jb_srdy,jb_tds,jb_fzdl,jb_rdson,jb_qybh,jb_gwbh,jb_dlbh,jb_snkz,jb_qdfs from v9_cp_jb_data"}
+                {pc:get sql="select jb_xh,jb_fz,jb_srdy,jb_tds,jb_fzdl,jb_rdson,jb_qybh,jb_gwbh,jb_dlbh,jb_snkz,jb_qdfs from v9_cp_jb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[jb_xh]}</td>
@@ -541,7 +541,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select k_xh,k_fz,k_srdy,k_djdl,k_tds,k_scsj,k_scyj,k_scms,k_lmd from v9_cp_k_data"}
+                {pc:get sql="select k_xh,k_fz,k_srdy,k_djdl,k_tds,k_scsj,k_scyj,k_scms,k_lmd from v9_cp_k_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[k_xh]}</td>
@@ -570,7 +570,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select l_xh,l_fz,l_srdy,l_djdl,l_gzdl,l_rdson,l_gfdl,l_gfdy,l_gfdsf,l_gwbh from v9_pc_l_data"}
+                {pc:get sql="select l_xh,l_fz,l_srdy,l_djdl,l_gzdl,l_rdson,l_gfdl,l_gfdy,l_gfdsf,l_gwbh from v9_pc_l_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[l_xh]}</td>
@@ -597,7 +597,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select lb_xh,lb_fz,lb_gzdyfw,lb_ccq,lb_sjcl,lb_io,lb_yxsd,lb_kmg,lb_fwgn,lb_jtdl,lb_gzdl from v9_pc_lb_data"}
+                {pc:get sql="select lb_xh,lb_fz,lb_gzdyfw,lb_ccq,lb_sjcl,lb_io,lb_yxsd,lb_kmg,lb_fwgn,lb_jtdl,lb_gzdl from v9_pc_lb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[lb_xh]}</td>

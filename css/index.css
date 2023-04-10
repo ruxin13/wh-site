@@ -91,6 +91,7 @@
     align-items: flex-start;
     padding-top: 38px;
     padding-bottom: 38px;
+    flex-wrap: wrap;
 }
 .s2-li{
     width: 290px;

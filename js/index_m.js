@@ -1,5 +1,7 @@
 $(function () {
 
+    console.log("===");
+
   $(".toggle-button").on("click", function () {
     $(".nav").slideToggle();
   });
