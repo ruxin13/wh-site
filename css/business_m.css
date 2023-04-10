@@ -1,0 +1,61 @@
+.fb{
+    width: 100%;
+    height: 6.4rem;
+    margin: 0 auto;
+    background: url("../img/business_banner_m.png") no-repeat center center / 100% 100%;
+}
+.fb-wrap{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 1.33rem;
+    box-sizing: border-box;
+}
+.fb-tit{
+    font-size: 1.07rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.49rem;
+    letter-spacing: 1px;
+}
+
+.bc{
+    width: 100%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 .53rem;
+}
+.bc-txt{
+    flex: 1;
+}
+.bc-txt.bc-r{
+    margin-left: .67rem;
+}
+.bc-tit{
+    font-size: 0.69rem;
+    font-weight: 500;
+    line-height: 0.85rem;
+    margin-bottom: .43rem;
+}
+.bc-tit:before{
+    content: '';
+    display: block;
+    width: 1.76rem;
+    height: .19rem;
+    background: linear-gradient(180deg, #5077FF 0%, #1A84C8 100%);
+    border-radius: .11rem;
+    margin-bottom: .53rem;
+}
+.bc-des{
+    font-size: 0.43rem;
+    line-height: 0.85rem;
+}
+.bc-img{
+    width: 8.8rem;
+    height: 5.6rem;
+}
