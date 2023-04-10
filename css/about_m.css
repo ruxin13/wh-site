@@ -1,0 +1,180 @@
+.fb{
+    width: 100%;
+    height: 6.4rem;
+    margin: 0 auto;
+    background: url("../img/about_banner_m.png") no-repeat center center / 100% 100%;
+}
+.fb-wrap{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 1.33rem;
+    box-sizing: border-box;
+}
+.fb-tit{
+    font-size: 1.07rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.49rem;
+    letter-spacing: 1px;
+}
+
+.a1{
+    width: 100%;
+    margin: 0 auto 1.07rem;
+    box-sizing: border-box;
+    padding: 0 .53rem;
+}
+.ab-tit{
+    display: flex;
+    align-items: center;
+    font-size: 0.64rem;
+    margin-bottom: .85rem;
+}
+.ab-tit:before{
+    content: "";
+    display: block;
+    width: .16rem;
+    height: .85rem;
+    background: linear-gradient(180deg, #5077FF 0%, #1A84C8 100%);
+    border-radius: .11rem;
+    margin-right: .27rem;
+}
+.a1 .ab-con{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.a1-l{
+
+}
+.a1-r{
+    width: 100%;
+    display: block;
+    margin-bottom: .53rem;
+}
+.a1-lt{
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.12rem;
+    margin-bottom: .53rem;
+}
+.a1-lc{
+    font-size: 0.45rem;
+    color: #333333;
+    line-height: 1.01rem;
+}
+
+.a2{
+    padding: 0 .53rem;
+    margin: 0 auto 1.07rem;
+}
+.a2 .ab-con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.a2-li{
+    width: 3rem;
+    position: relative;
+    margin-right: .64rem;
+}
+.a2-li:after{
+    content:'';
+    display: block;
+    width: .53rem;
+    height: .53rem;
+    background: url("../img/a2_dot.png") no-repeat center center / 100% 100%;
+    position: absolute;
+    right: -.6rem;
+    top: 1.59rem;
+}
+.a2-li:last-child{
+    margin-right: 0;
+}
+.a2-li:last-child:after{
+    display: none;
+}
+.a2-lt{
+    font-size: 0.85rem;
+    color: #235ABE;
+    line-height: 1.33rem;
+    background: linear-gradient(180deg, #5077FF 0%, #1A84C8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: .27rem;
+}
+.a2-lc{
+    width: 100%;
+    height: .53rem;
+    margin-bottom: .19rem;
+}
+.a2-lb{
+    font-size: 0.32rem;
+    line-height: 0.53rem;
+    text-align: center;
+}
+.a3{
+    padding: 0 .53rem;
+    margin: 0 auto 1.07rem;
+}
+.a3-li{
+    width: 100%;
+    display: block;
+    margin-bottom: .53rem;
+}
+.a3-li img{
+    width: 100%;
+    height: 100%;
+}
+
+.a4{
+    padding: 0 .53rem;
+    margin: 0 auto 1.07rem;
+}
+.a4 .ab-con{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.a4-li{
+    display: block;
+    width: 5.7rem;
+    height: 5rem;
+    margin-right: .27rem;
+    margin-bottom: .27rem;
+}
+.a4-li img{
+    width: 100%;
+    height: 100%;
+}
+.a4-li:nth-child(3){
+    margin-right: 0;
+}
+.a4-li:last-child{
+    margin-right: 0;
+}
+
+.a5{
+    padding: 0 .53rem;
+    margin: 0 auto 1.07rem;
+}
+.a5 .ab-con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.a5-li{
+    display: block;
+    width: 5.2rem;
+    height: 2.1rem;
+    margin-right: 1rem;
+    margin-bottom: .53rem;
+}
+.a5 .ab-con .a5-li:nth-child(3n){
+    margin-right: 0;
+}
+.a5-li img{
+    width: 100%;
+    height: 100%;
+}
