@@ -28,6 +28,7 @@ define(['jquery', 'wow'], function ($, WOW) {
         });
         $(".toggle-search").on("click", function () {
             console.log("search");
+            $(".top-r").slideToggle();
         });
 
         var wow = new WOW({

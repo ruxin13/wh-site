@@ -92,7 +92,41 @@ a{
 }
 .top-r{
     display: none;
+    position: fixed;
+    top: 3.84rem;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 90;
+    padding: .53rem;
 }
+.top-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .53rem;
+}
+.search-input{
+    min-width: 4rem;
+    height: 1.76rem;
+    font-size: .69rem;
+    flex: 1;
+    box-sizing: border-box;
+}
+.search-btn{
+    width: 3rem;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    background-color: #097BC4;
+    color: #fff;
+    font-size: .53rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+
 .top-r-m{
     height: 1.65rem;
     display: flex;
