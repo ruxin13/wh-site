@@ -75,6 +75,11 @@ a{
     padding: 1.65rem .8rem .53rem .53rem;
     box-sizing: border-box;
     height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: 0 .1rem .5rem rgba(0,0,0,.15);
 }
 .top-l{
     width: 4.21rem;
@@ -159,7 +164,7 @@ a{
 .nav{
     display: none;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 3.84rem;
     left: 0;
     right: 0;

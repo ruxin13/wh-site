@@ -4,7 +4,10 @@
     <meta name="keywords" content="{$SEO['keyword']}">
     <meta name="description" content="{$SEO['description']}">
     {template "content","head"}
-    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}product.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}reset.css" media="screen and (min-width:1000px)" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}reset_m.css" media="screen and (max-width:999px)" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}product.css" media="screen and (min-width:1000px)" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH_NEW}product_m.css" media="screen and (max-width:999px)" />
 </head>
 <body>
 
@@ -12,7 +15,7 @@
     {template "content","top"}
     <div class="fb">
         <div class="fb-wrap">
-<!--            <div class="fb-tit">{$CATEGORYS[$catid][catname]}</div>-->
+            <div class="fb-tit">{$CATEGORYS[$catid][catname]}</div>
         </div>
     </div>
 
@@ -35,66 +38,74 @@
     <div class="v-list">
         <div class="vli">
             <div class="vli-tit" id="m13">思远TWS充电仓电源管理芯片</div>
-            <table class="v-table">
-                <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=13 and listorder<99 and listorder>0 order by listorder"}
+            <div class="v-wrap">
+                <table class="v-table">
+                    <tr class="v-thead">
+                        {pc:get sql="select name from v9_model_field where modelid=13 and listorder<99 and listorder>0 order by listorder"}
+                        {loop $data $r}
+                        <th class="v-td">{$r[name]}</th>
+                        {/loop}
+                        {/pc}
+                    </tr>
+                    {pc:get sql="select a_cpxh,a_ny,a_cdfs,a_cddl,a_fddl,a_fdgddl,a_led,a_ntc,a_gdms,a_fz,a_bz from v9_cp_a_data" num="99"}
                     {loop $data $r}
-                    <th class="v-td">{$r[name]}</th>
+                    <tr class="v-tbody">
+                        <td>{$r[a_cpxh]}</td><td>{$r[a_ny]}</td><td>{$r[a_cdfs]}</td><td>{$r[a_cddl]}</td><td>{$r[a_fddl]}</td><td>{$r[a_fdgddl]}</td><td>{$r[a_led]}</td><td>{$r[a_ntc]}</td><td>{$r[a_gdms]}</td><td>{$r[a_fz]}</td><td>{$r[a_bz]}</td>
+                    </tr>
                     {/loop}
                     {/pc}
-                </tr>
-                {pc:get sql="select a_cpxh,a_ny,a_cdfs,a_cddl,a_fddl,a_fdgddl,a_led,a_ntc,a_gdms,a_fz,a_bz from v9_cp_a_data" num="99"}
-                {loop $data $r}
-                <tr class="v-tbody">
-                    <td>{$r[a_cpxh]}</td><td>{$r[a_ny]}</td><td>{$r[a_cdfs]}</td><td>{$r[a_cddl]}</td><td>{$r[a_fddl]}</td><td>{$r[a_fdgddl]}</td><td>{$r[a_led]}</td><td>{$r[a_ntc]}</td><td>{$r[a_gdms]}</td><td>{$r[a_fz]}</td><td>{$r[a_bz]}</td>
-                </tr>
-                {/loop}
-                {/pc}
-            </table>
+                </table>
+            </div>
+
         </div>
 
         <div class="vli">
             <div class="vli-tit" id="m14">思远OVP/OCP芯片</div>
-            <table class="v-table">
-                <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=14 and listorder<99 and listorder>0 order by listorder"}
+            <div class="v-wrap">
+                <table class="v-table">
+                    <tr class="v-thead">
+                        {pc:get sql="select name from v9_model_field where modelid=14 and listorder<99 and listorder>0 order by listorder"}
+                        {loop $data $r}
+                        <th class="v-td">{$r[name]}</th>
+                        {/loop}
+                        {/pc}
+                    </tr>
+                    {pc:get sql="select b_cpxh,b_ron,b_ovp,b_ovpm,b_ocp,b_ocpm,b_12v,b_20v,b_fz from v9_cp_b_data" num="99"}
                     {loop $data $r}
-                    <th class="v-td">{$r[name]}</th>
+                    <tr class="v-tbody">
+                        <td>{$r[b_cpxh]}</td><td>{$r[b_ron]}</td><td>{$r[b_ovp]}</td><td>{$r[b_ovpm]}</td><td>{$r[b_ocp]}</td><td>{$r[b_ocpm]}</td><td>{$r[b_12v]}</td><td>{$r[b_20v]}</td><td>{$r[b_fz]}</td>
+                    </tr>
                     {/loop}
                     {/pc}
-                </tr>
-                {pc:get sql="select b_cpxh,b_ron,b_ovp,b_ovpm,b_ocp,b_ocpm,b_12v,b_20v,b_fz from v9_cp_b_data" num="99"}
-                {loop $data $r}
-                <tr class="v-tbody">
-                    <td>{$r[b_cpxh]}</td><td>{$r[b_ron]}</td><td>{$r[b_ovp]}</td><td>{$r[b_ovpm]}</td><td>{$r[b_ocp]}</td><td>{$r[b_ocpm]}</td><td>{$r[b_12v]}</td><td>{$r[b_20v]}</td><td>{$r[b_fz]}</td>
-                </tr>
-                {/loop}
-                {/pc}
-            </table>
+                </table>
+            </div>
         </div>
 
         <div class="vli">
             <div class="vli-tit" id="m15">思远锂电池充电管理芯片</div>
-            <table class="v-table">
-                <tr class="v-thead">
-                    {pc:get sql="select name from v9_model_field where modelid=15 and listorder<99 and listorder>0 order by listorder"}
+            <div class="v-wrap">
+                <table class="v-table">
+                    <tr class="v-thead">
+                        {pc:get sql="select name from v9_model_field where modelid=15 and listorder<99 and listorder>0 order by listorder"}
+                        {loop $data $r}
+                        <th class="v-td">{$r[name]}</th>
+                        {/loop}
+                        {/pc}
+                    </tr>
+                    {pc:get sql="select c_cpxh,c_srny,c_ovp,c_cddl,c_cdjz,c_cddyjd,c_bcdl,c_bcfoc,c_cdzt,c_ntc,c_dsgd,c_fz from v9_cp_c_data" num="99"}
                     {loop $data $r}
-                    <th class="v-td">{$r[name]}</th>
+                    <tr class="v-tbody">
+                        <td>{$r[c_cpxh]}</td><td>{$r[c_srny]}</td><td>{$r[c_ovp]}</td><td>{$r[c_cddl]}</td><td>{$r[c_cdjz]}</td><td>{$r[c_cddyjd]}</td><td>{$r[c_bcdl]}</td><td>{$r[c_bcfoc]}</td><td>{$r[c_cdzt]}</td><td>{$r[c_ntc]}</td><td>{$r[c_dsgd]}</td><td>{$r[c_fz]}</td>
+                    </tr>
                     {/loop}
                     {/pc}
-                </tr>
-                {pc:get sql="select c_cpxh,c_srny,c_ovp,c_cddl,c_cdjz,c_cddyjd,c_bcdl,c_bcfoc,c_cdzt,c_ntc,c_dsgd,c_fz from v9_cp_c_data" num="99"}
-                {loop $data $r}
-                <tr class="v-tbody">
-                    <td>{$r[c_cpxh]}</td><td>{$r[c_srny]}</td><td>{$r[c_ovp]}</td><td>{$r[c_cddl]}</td><td>{$r[c_cdjz]}</td><td>{$r[c_cddyjd]}</td><td>{$r[c_bcdl]}</td><td>{$r[c_bcfoc]}</td><td>{$r[c_cdzt]}</td><td>{$r[c_ntc]}</td><td>{$r[c_dsgd]}</td><td>{$r[c_fz]}</td>
-                </tr>
-                {/loop}
-                {/pc}
-            </table>
+                </table>
+            </div>
         </div>
 
         <div class="vli">
             <div class="vli-tit" id="m45">创芯微锂电池保护芯片</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="9">智能穿戴设备电池保护芯片</th></tr>
                 <tr class="v-thead">
@@ -112,7 +123,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="10">3-4节电池保护芯片</th></tr>
                 <tr class="v-thead">
@@ -128,7 +140,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="10">4-7节电池保护芯片</th></tr>
                 <tr class="v-thead">
@@ -144,7 +157,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="10">10、13、14节电池保护芯片</th></tr>
                 <tr class="v-thead">
@@ -160,11 +174,13 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
 
         <div class="vli">
             <div class="vli-tit" id="m20">霍尔开关芯片</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=20 and listorder<99 and listorder>0 order by listorder"}
@@ -179,11 +195,13 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
 
         <div class="vli">
             <div class="vli-tit" id="m21">无线充接收芯片</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=21 and listorder<99 and listorder>0 order by listorder"}
@@ -198,11 +216,13 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
 
         <div class="vli">
             <div class="vli-tit" id="m44">欧创芯中低压LED恒流驱动芯片</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC升压恒流系列</th></tr>
                 <tr class="v-thead">
@@ -218,7 +238,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC降压恒流系列</th></tr>
                 <tr class="v-thead">
@@ -234,7 +255,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">同步开关降压 LED Driver DC-DC降压恒流系列</th></tr>
                 <tr class="v-thead">
@@ -263,7 +285,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC 升降压恒流系列</th></tr>
                 <tr class="v-thead">
@@ -292,7 +315,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver 线性恒流驱动芯片系列</th></tr>
                 <tr class="v-thead">
@@ -320,7 +344,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">LED Driver DC-DC降压恒流专用IC系列：多功能LED手电筒专用芯片</th></tr>
                 <tr class="v-thead">
@@ -348,10 +373,12 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
         <div class="vli">
             <div class="vli-tit" id="m43">欧创芯中低压DCDC恒压芯片</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="12">DC-DC降压恒压系列</th></tr>
                 <tr class="v-thead">
@@ -380,7 +407,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="12">DC-DC升压恒压系列</th></tr>
                 <tr class="v-thead">
@@ -408,7 +436,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="11">超低功耗DC-DC 升压恒压系列</th></tr>
                 <tr class="v-thead">
@@ -436,12 +465,13 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
         </div>
 
 
         <div class="vli">
             <div class="vli-tit" id="m42">欧创芯线性稳压器</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="12">低功耗高耐压电压稳压器</th></tr>
                 <tr class="v-thead">
@@ -469,11 +499,13 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
 
         <div class="vli">
             <div class="vli-tit" id="m40">欧创芯功率管驱动器</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="11">功率管驱动器</th></tr>
                 <tr class="v-thead">
@@ -501,6 +533,8 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
                 <tr class="vli-stit"><th colspan="11">3.6A 刷式直流电机驱动器</th></tr>
                 <tr class="v-thead">
@@ -528,10 +562,12 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
         <div class="vli">
             <div class="vli-tit" id="m39">欧创芯触摸芯片</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="9">单按键触摸检测芯片</th></tr>
                 <tr class="v-thead">
@@ -557,10 +593,12 @@
                 {/loop}
                 {/pc}
             </table>
+            </div>
         </div>
 
         <div class="vli">
             <div class="vli-tit" id="m50">欧创芯电芯保护IC/MCU</div>
+            <div class="v-wrap">
             <table class="v-table">
                 <tr class="vli-stit"><th colspan="10">电芯保护IC</th></tr>
                 <tr class="v-thead">
@@ -587,7 +625,8 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
+            <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px">
                 <tr class="vli-stit"><th colspan="11">8位MCU</th></tr>
                 <tr class="v-thead">
@@ -615,7 +654,7 @@
                 {/loop}
                 {/pc}
             </table>
-
+            </div>
         </div>
 
 

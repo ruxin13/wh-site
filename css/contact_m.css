@@ -1,0 +1,125 @@
+.fb{
+    width: 100%;
+    height: 6.4rem;
+    margin: 0 auto;
+    background: url("../img/banner_contact_m.png") no-repeat center center / 100% 100%;
+}
+.fb-wrap{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 1.33rem;
+    box-sizing: border-box;
+}
+.fb-tit{
+    font-size: 1.07rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.49rem;
+    letter-spacing: 1px;
+}
+
+.c1,.c2{
+    padding: 0 .53rem;
+    margin-bottom: 1.07rem;
+}
+.cb-tit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.07rem;
+    font-size: .64rem;
+}
+.cb-tit:before{
+    content: "";
+    display: block;
+    width: 0.16rem;
+    height: 0.85rem;
+    background: linear-gradient(180deg, #5077FF 0%, #1A84C8 100%);
+    border-radius: 0.11rem;
+    margin-right: .27rem;
+}
+.c1-tit{
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.01rem;
+    margin-bottom: .96rem;
+}
+.c1-con{
+    display: flex;
+    flex-direction: column;
+}
+.c1-map{
+    width: 100%;
+    height: 11rem;
+    margin-bottom: .85rem;
+}
+.c1-rt{
+    font-size: 0.64rem;
+    font-weight: 500;
+    line-height: 0.88rem;
+    margin-bottom: .13rem;
+}
+.c1-rc{
+    font-size: 0.53rem;
+    color: #333333;
+    line-height: 1.01rem;
+    margin-bottom: .85rem;
+}
+.c1-rc:last-child{
+    margin-bottom: 0;
+}
+
+.c2-li{
+    width: 100%;
+    display: block;
+    margin-bottom: .64rem;
+}
+.c2-mt{
+    display: block;
+    font-size: 0.64rem;
+    font-weight: 500;
+    color: #000000;
+    line-height: 0.88rem;
+    margin-bottom: .59rem;
+}
+.c2-li.required .c2-mt:after{
+    content: '*';
+    display: inline-block;
+    font-size: 0.64rem;
+    vertical-align: middle;
+    color: red;
+    margin-left: .2rem;
+}
+.c2-input{
+    width: 100%;
+    box-sizing: border-box;
+    height: 1.76rem;
+    box-shadow: none;
+    border-radius: 0;
+    border: solid 1px #ccc;
+    padding: 0 .53rem;
+}
+.c2-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    height: 5rem;
+    box-shadow: none;
+    border-radius: 0;
+    border: solid 1px #ccc;
+    padding: .53rem;
+}
+.c2-submit{
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    text-align: center;
+    background-color: #097BC4;
+    margin: 0 auto;
+    font-size: .64rem;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}

@@ -16,21 +16,23 @@ define(['flexible', 'jquery', 'swiper', 'wow', 'common', 'common_m', 'map'], fun
         console.log("pc");
         common.bind();
 
-        initMap();
+        initMap(196, 77, 17, 100);
 
     };
     modal.mInit = function () {
         console.log("mobile");
         common_m.bind();
+
+        initMap(98, 39, 16, 50);
     };
 
-    function initMap () {
+    function initMap (_w, _h, _z, _p) {
         var container = document.querySelector("#mapWrap");
         var center = new TMap.LatLng(22.592584,113.836156);//设置中心点坐标
 //初始化地图
         var map = new TMap.Map(container, {
             center: center,
-            zoom: 17
+            zoom: _z
         });
 
 //创建并初始化MultiMarker
@@ -40,11 +42,11 @@ define(['flexible', 'jquery', 'swiper', 'wow', 'common', 'common_m', 'map'], fun
             styles: {
                 //创建一个styleId为"myStyle"的样式（styles的子属性名即为styleId）
                 "myStyle": new TMap.MarkerStyle({
-                    "width": 196,  // 点标记样式宽度（像素）
-                    "height": 77, // 点标记样式高度（像素）
+                    "width": _w,  // 点标记样式宽度（像素）
+                    "height": _h, // 点标记样式高度（像素）
                     "src": '/statics/new/img/logo.png',  //图片路径
                     //焦点在图片中的像素位置，一般大头针类似形式的图片以针尖位置做为焦点，圆形点以圆心位置为焦点
-                    "anchor": { x: 0, y: 100 }
+                    "anchor": { x: 50, y: _p }
                 })
             },
             //点标记数据数组
