@@ -206,7 +206,7 @@ a{
     padding: 0 .53rem;
     width: 100%;
     box-sizing: border-box;
-    z-index: 99;
+    z-index: 2999;
 }
 .nav:before{
     content: '';

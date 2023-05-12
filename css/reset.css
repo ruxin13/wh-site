@@ -123,6 +123,8 @@ a{
     height: 62px;
     background: url("../img/search.png") no-repeat center center / 30px 30px;
     background-color: #3C3C3C;
+    font-size: 0;
+    color: transparent;
 }
 
 .nav{
