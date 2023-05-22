@@ -120,7 +120,7 @@
     font-weight: normal;
 }
 .v-table .v-tbody:hover{
-    background: rgba(47, 61, 72, 0.2);
+    /*background: rgba(47, 61, 72, 0.2);*/
 }
 .v-table sub{
     vertical-align: sub;
@@ -141,4 +141,25 @@
 }
 .v-tbody:nth-child(odd){
     background: rgba(203,203,203,0.33);
+}
+.v-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    min-width: 110px;
+}
+.v-download:before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon_d.png") no-repeat center center / 100% 100%;
+    margin-right: 6px;
+}
+.v-download:hover{
+    color: #1A84C8;
+}
+.v-download:hover:before{
+    background: url("../img/icon_dh.png") no-repeat center center / 100% 100%;
 }

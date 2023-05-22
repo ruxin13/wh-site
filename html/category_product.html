@@ -47,10 +47,10 @@
                         {/loop}
                         {/pc}
                     </tr>
-                    {pc:get sql="select a_cpxh,a_ny,a_cdfs,a_cddl,a_fddl,a_fdgddl,a_led,a_ntc,a_gdms,a_fz,a_bz from v9_cp_a_data" num="99"}
+                    {pc:get sql="select a_cpxh,a_ny,a_cdfs,a_cddl,a_fddl,a_fdgddl,a_led,a_ntc,a_gdms,a_fz,a_bz,a_pdf from v9_cp_a_data" num="99"}
                     {loop $data $r}
                     <tr class="v-tbody">
-                        <td>{$r[a_cpxh]}</td><td>{$r[a_ny]}</td><td>{$r[a_cdfs]}</td><td>{$r[a_cddl]}</td><td>{$r[a_fddl]}</td><td>{$r[a_fdgddl]}</td><td>{$r[a_led]}</td><td>{$r[a_ntc]}</td><td>{$r[a_gdms]}</td><td>{$r[a_fz]}</td><td>{$r[a_bz]}</td>
+                        <td>{$r[a_cpxh]}</td><td>{$r[a_ny]}</td><td>{$r[a_cdfs]}</td><td>{$r[a_cddl]}</td><td>{$r[a_fddl]}</td><td>{$r[a_fdgddl]}</td><td>{$r[a_led]}</td><td>{$r[a_ntc]}</td><td>{$r[a_gdms]}</td><td>{$r[a_fz]}</td><td>{$r[a_bz]}</td><td>{if $r[a_pdf]!=''}<a class="v-download" href="{$r[a_pdf]}" download>下载</a>{else}-{/if}</td>
                     </tr>
                     {/loop}
                     {/pc}
@@ -70,10 +70,10 @@
                         {/loop}
                         {/pc}
                     </tr>
-                    {pc:get sql="select b_cpxh,b_ron,b_ovp,b_ovpm,b_ocp,b_ocpm,b_12v,b_20v,b_fz from v9_cp_b_data" num="99"}
+                    {pc:get sql="select b_cpxh,b_ron,b_ovp,b_ovpm,b_ocp,b_ocpm,b_12v,b_20v,b_fz,b_pdf from v9_cp_b_data" num="99"}
                     {loop $data $r}
                     <tr class="v-tbody">
-                        <td>{$r[b_cpxh]}</td><td>{$r[b_ron]}</td><td>{$r[b_ovp]}</td><td>{$r[b_ovpm]}</td><td>{$r[b_ocp]}</td><td>{$r[b_ocpm]}</td><td>{$r[b_12v]}</td><td>{$r[b_20v]}</td><td>{$r[b_fz]}</td>
+                        <td>{$r[b_cpxh]}</td><td>{$r[b_ron]}</td><td>{$r[b_ovp]}</td><td>{$r[b_ovpm]}</td><td>{$r[b_ocp]}</td><td>{$r[b_ocpm]}</td><td>{$r[b_12v]}</td><td>{$r[b_20v]}</td><td>{$r[b_fz]}</td><td>{if $r[b_pdf]!=''}<a class="v-download" href="{$r[b_pdf]}" download>下载</a>{else}-{/if}</td>
                     </tr>
                     {/loop}
                     {/pc}
@@ -92,10 +92,10 @@
                         {/loop}
                         {/pc}
                     </tr>
-                    {pc:get sql="select c_cpxh,c_srny,c_ovp,c_cddl,c_cdjz,c_cddyjd,c_bcdl,c_bcfoc,c_cdzt,c_ntc,c_dsgd,c_fz from v9_cp_c_data" num="99"}
+                    {pc:get sql="select c_cpxh,c_srny,c_ovp,c_cddl,c_cdjz,c_cddyjd,c_bcdl,c_bcfoc,c_cdzt,c_ntc,c_dsgd,c_fz,c_pdf from v9_cp_c_data" num="99"}
                     {loop $data $r}
                     <tr class="v-tbody">
-                        <td>{$r[c_cpxh]}</td><td>{$r[c_srny]}</td><td>{$r[c_ovp]}</td><td>{$r[c_cddl]}</td><td>{$r[c_cdjz]}</td><td>{$r[c_cddyjd]}</td><td>{$r[c_bcdl]}</td><td>{$r[c_bcfoc]}</td><td>{$r[c_cdzt]}</td><td>{$r[c_ntc]}</td><td>{$r[c_dsgd]}</td><td>{$r[c_fz]}</td>
+                        <td>{$r[c_cpxh]}</td><td>{$r[c_srny]}</td><td>{$r[c_ovp]}</td><td>{$r[c_cddl]}</td><td>{$r[c_cdjz]}</td><td>{$r[c_cddyjd]}</td><td>{$r[c_bcdl]}</td><td>{$r[c_bcfoc]}</td><td>{$r[c_cdzt]}</td><td>{$r[c_ntc]}</td><td>{$r[c_dsgd]}</td><td>{$r[c_fz]}</td><td>{if $r[c_pdf]!=''}<a class="v-download" href="{$r[c_pdf]}" download>下载</a>{else}-{/if}</td>
                     </tr>
                     {/loop}
                     {/pc}
@@ -107,7 +107,7 @@
             <div class="vli-tit" id="m45">创芯微锂电池保护芯片</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="9">智能穿戴设备电池保护芯片</th></tr>
+                <tr class="vli-stit"><th colspan="11">智能穿戴设备电池保护芯片</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=16 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -115,10 +115,10 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select da_cpxh,da_gcbh,da_gcjc,da_gfbh,da_gfjc,da_fdjc,da_dljc,da_cddl,da_fz from v9_cp_d_data" num="99"}
+                {pc:get sql="select da_cpxh,da_gcbh,da_gcjc,da_gfbh,da_gfjc,da_fdjc,da_dljc,da_cddl,da_fz,da_pdf from v9_cp_d_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
-                    <td>{$r[da_cpxh]}</td><td>{$r[da_gcbh]}</td><td>{$r[da_gcjc]}</td><td>{$r[da_gfbh]}</td><td>{$r[da_gfjc]}</td><td>{$r[da_fdjc]}</td><td>{$r[da_dljc]}</td><td>{$r[da_cddl]}</td><td>{$r[da_fz]}</td>
+                    <td>{$r[da_cpxh]}</td><td>{$r[da_gcbh]}</td><td>{$r[da_gcjc]}</td><td>{$r[da_gfbh]}</td><td>{$r[da_gfjc]}</td><td>{$r[da_fdjc]}</td><td>{$r[da_dljc]}</td><td>{$r[da_cddl]}</td><td>{$r[da_fz]}</td><td>{if $r[da_pdf]!=''}<a class="v-download" href="{$r[da_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -126,7 +126,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="10">3-4节电池保护芯片</th></tr>
+                <tr class="vli-stit"><th colspan="11">3-4节电池保护芯片</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=17 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -134,16 +134,16 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select db_cpxh,db_gcdy,db_gcjc,db_gfbh,db_gfjc,db_fdgl1,db_fdgl2,db_dl,db_cddl,db_fz from v9_cp_db_data" num="99"}
+                {pc:get sql="select db_cpxh,db_gcdy,db_gcjc,db_gfbh,db_gfjc,db_fdgl1,db_fdgl2,db_dl,db_cddl,db_fz,db_pdf from v9_cp_db_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[db_cpxh]}</td><td>{$r[db_gcdy]}</td><td>{$r[db_gcjc]}</td><td>{$r[db_gfbh]}</td><td>{$r[db_gfjc]}</td><td>{$r[db_fdgl1]}</td><td>{$r[db_fdgl2]}</td><td>{$r[db_dl]}</td><td>{$r[db_cddl]}</td><td>{$r[db_fz]}</td></tr>
+                <tr class="v-tbody"><td>{$r[db_cpxh]}</td><td>{$r[db_gcdy]}</td><td>{$r[db_gcjc]}</td><td>{$r[db_gfbh]}</td><td>{$r[db_gfjc]}</td><td>{$r[db_fdgl1]}</td><td>{$r[db_fdgl2]}</td><td>{$r[db_dl]}</td><td>{$r[db_cddl]}</td><td>{$r[db_fz]}</td><td>{if $r[db_pdf]!=''}<a class="v-download" href="{$r[db_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="10">4-7节电池保护芯片</th></tr>
+                <tr class="vli-stit"><th colspan="11">4-7节电池保护芯片</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=18 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -151,16 +151,16 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select dc_cpxh,dc_gcbh,dc_gcjc,dc_gfbh,dc_gfjc,dc_fddl1,dc_fddl2,dc_dl,dc_cddl,dc_fz from v9_cp_dc_data" num="99"}
+                {pc:get sql="select dc_cpxh,dc_gcbh,dc_gcjc,dc_gfbh,dc_gfjc,dc_fddl1,dc_fddl2,dc_dl,dc_cddl,dc_fz,dc_pdf from v9_cp_dc_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[dc_cpxh]}</td><td>{$r[dc_gcbh]}</td><td>{$r[dc_gcjc]}</td><td>{$r[dc_gfbh]}</td><td>{$r[dc_gfjc]}</td><td>{$r[dc_fddl1]}</td><td>{$r[dc_fddl2]}</td><td>{$r[dc_dl]}</td><td>{$r[dc_cddl]}</td><td>{$r[dc_fz]}</td></tr>
+                <tr class="v-tbody"><td>{$r[dc_cpxh]}</td><td>{$r[dc_gcbh]}</td><td>{$r[dc_gcjc]}</td><td>{$r[dc_gfbh]}</td><td>{$r[dc_gfjc]}</td><td>{$r[dc_fddl1]}</td><td>{$r[dc_fddl2]}</td><td>{$r[dc_dl]}</td><td>{$r[dc_cddl]}</td><td>{$r[dc_fz]}</td><td>{if $r[dc_pdf]!=''}<a class="v-download" href="{$r[dc_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="10">10、13、14节电池保护芯片</th></tr>
+                <tr class="vli-stit"><th colspan="11">10、13、14节电池保护芯片</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=19 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -168,9 +168,9 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select dd_cpxh,dd_gcbh,dd_gcjc,dd_gfbh,dd_gfjc,dd_fddl1,dd_fddl2,dd_dl,dd_cddl,dd_fz from v9_cp_dd_data" num="99"}
+                {pc:get sql="select dd_cpxh,dd_gcbh,dd_gcjc,dd_gfbh,dd_gfjc,dd_fddl1,dd_fddl2,dd_dl,dd_cddl,dd_fz,dd_pdf from v9_cp_dd_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[dd_cpxh]}</td><td>{$r[dd_gcbh]}</td><td>{$r[dd_gcjc]}</td><td>{$r[dd_gfbh]}</td><td>{$r[dd_gfjc]}</td><td>{$r[dd_fddl1]}</td><td>{$r[dd_fddl2]}</td><td>{$r[dd_dl]}</td><td>{$r[dd_cddl]}</td><td>{$r[dd_fz]}</td></tr>
+                <tr class="v-tbody"><td>{$r[dd_cpxh]}</td><td>{$r[dd_gcbh]}</td><td>{$r[dd_gcjc]}</td><td>{$r[dd_gfbh]}</td><td>{$r[dd_gfjc]}</td><td>{$r[dd_fddl1]}</td><td>{$r[dd_fddl2]}</td><td>{$r[dd_dl]}</td><td>{$r[dd_cddl]}</td><td>{$r[dd_fz]}</td><td>{if $r[dd_pdf]!=''}<a class="v-download" href="{$r[dd_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
@@ -189,9 +189,9 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select e_cpxh,e_jx,e_opt,e_hys,e_fz from v9_cp_e_data" num="99"}
+                {pc:get sql="select e_cpxh,e_jx,e_opt,e_hys,e_fz,e_pdf from v9_cp_e_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[e_cpxh]}</td><td>{$r[e_jx]}</td><td>{$r[e_opt]}</td><td>{$r[e_hys]}</td><td>{$r[e_fz]}</td></tr>
+                <tr class="v-tbody"><td>{$r[e_cpxh]}</td><td>{$r[e_jx]}</td><td>{$r[e_opt]}</td><td>{$r[e_hys]}</td><td>{$r[e_fz]}</td><td>{if $r[e_pdf]!=''}<a class="v-download" href="{$r[e_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
@@ -210,9 +210,9 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select f_cpxh,f_ov,f_moc,f_mrp,f_qi,f_fz,f_bz from v9_cp_f_data" num="99"}
+                {pc:get sql="select f_cpxh,f_ov,f_moc,f_mrp,f_qi,f_fz,f_bz,f_pdf from v9_cp_f_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[f_cpxh]}</td><td>{$r[f_ov]}</td><td>{$r[f_moc]}</td><td>{$r[f_mrp]}</td><td>{$r[f_qi]}</td><td>{$r[f_fz]}</td><td>{$r[f_bz]}</td></tr>
+                <tr class="v-tbody"><td>{$r[f_cpxh]}</td><td>{$r[f_ov]}</td><td>{$r[f_moc]}</td><td>{$r[f_mrp]}</td><td>{$r[f_qi]}</td><td>{$r[f_fz]}</td><td>{$r[f_bz]}</td><td>{if $r[f_pdf]!=''}<a class="v-download" href="{$r[f_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
@@ -224,7 +224,7 @@
             <div class="vli-tit" id="m44">欧创芯中低压LED恒流驱动芯片</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="12">LED Driver DC-DC升压恒流系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">LED Driver DC-DC升压恒流系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=22 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -232,16 +232,16 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select g_xh,g_fz,g_srdy,g_scdy,g_srdl,g_scgl,g_qdfs,g_xl,g_gzms,g_dlcy,g_tggl,g_vcs from v9_cp_g_data" num="99"}
+                {pc:get sql="select g_xh,g_fz,g_srdy,g_scdy,g_srdl,g_scgl,g_qdfs,g_xl,g_gzms,g_dlcy,g_tggl,g_vcs,g_pdf from v9_cp_g_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[g_xh]}</td><td>{$r[g_fz]}</td><td>{$r[g_srdy]}</td><td>{$r[g_scdy]}</td><td>{$r[g_srdl]}</td><td>{$r[g_scgl]}</td><td>{$r[g_qdfs]}</td><td>{$r[g_xl]}</td><td>{$r[g_gzms]}</td><td>{$r[g_dlcy]}</td><td>{$r[g_tggl]}</td><td>{$r[g_vcs]}</td></tr>
+                <tr class="v-tbody"><td>{$r[g_xh]}</td><td>{$r[g_fz]}</td><td>{$r[g_srdy]}</td><td>{$r[g_scdy]}</td><td>{$r[g_srdl]}</td><td>{$r[g_scgl]}</td><td>{$r[g_qdfs]}</td><td>{$r[g_xl]}</td><td>{$r[g_gzms]}</td><td>{$r[g_dlcy]}</td><td>{$r[g_tggl]}</td><td>{$r[g_vcs]}</td><td>{if $r[g_pdf]!=''}<a class="v-download" href="{$r[g_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="12">LED Driver DC-DC降压恒流系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">LED Driver DC-DC降压恒流系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=23 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -249,16 +249,16 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gb_xh,gb_fz,gb_srdy,gb_scdy,gb_srdl,gb_scgl,gb_qdfs,gb_xl,gb_gzms,gb_dlcy,gb_tggl,gb_vcs from v9_cp_gb_data" num="99"}
+                {pc:get sql="select gb_xh,gb_fz,gb_srdy,gb_scdy,gb_srdl,gb_scgl,gb_qdfs,gb_xl,gb_gzms,gb_dlcy,gb_tggl,gb_vcs,gb_pdf from v9_cp_gb_data" num="99"}
                 {loop $data $r}
-                <tr class="v-tbody"><td>{$r[gb_xh]}</td><td>{$r[gb_fz]}</td><td>{$r[gb_srdy]}</td><td>{$r[gb_scdy]}</td><td>{$r[gb_srdl]}</td><td>{$r[gb_scgl]}</td><td>{$r[gb_qdfs]}</td><td>{$r[gb_xl]}</td><td>{$r[gb_gzms]}</td><td>{$r[gb_dlcy]}</td><td>{$r[gb_tggl]}</td><td>{$r[gb_vcs]}</td></tr>
+                <tr class="v-tbody"><td>{$r[gb_xh]}</td><td>{$r[gb_fz]}</td><td>{$r[gb_srdy]}</td><td>{$r[gb_scdy]}</td><td>{$r[gb_srdl]}</td><td>{$r[gb_scgl]}</td><td>{$r[gb_qdfs]}</td><td>{$r[gb_xl]}</td><td>{$r[gb_gzms]}</td><td>{$r[gb_dlcy]}</td><td>{$r[gb_tggl]}</td><td>{$r[gb_vcs]}</td><td>{if $r[gb_pdf]!=''}<a class="v-download" href="{$r[gb_pdf]}" download>下载</a>{else}-{/if}</td></tr>
                 {/loop}
                 {/pc}
             </table>
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="12">同步开关降压 LED Driver DC-DC降压恒流系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">同步开关降压 LED Driver DC-DC降压恒流系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=24 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -266,7 +266,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gc_xh,gc_fz,gc_srdy,gc_scdy,gc_srdl,gc_scgl,gc_qdfs,gc_xl,gc_gzms,gc_dlcy,gc_tggl,gc_vcs from v9_cp_gc_data" num="99"}
+                {pc:get sql="select gc_xh,gc_fz,gc_srdy,gc_scdy,gc_srdl,gc_scgl,gc_qdfs,gc_xl,gc_gzms,gc_dlcy,gc_tggl,gc_vcs,gc_pdf from v9_cp_gc_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[gc_xh]}</td>
@@ -281,6 +281,7 @@
                     <td>{$r[gc_dlcy]}</td>
                     <td>{$r[gc_tggl]}</td>
                     <td>{$r[gc_vcs]}</td>
+                    <td>{if $r[gc_pdf]!=''}<a class="v-download" href="{$r[gc_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -288,7 +289,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="12">LED Driver DC-DC 升降压恒流系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">LED Driver DC-DC 升降压恒流系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=26 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -296,7 +297,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gd_xh,gd_fz,gd_srdy,gd_scdy,gd_srdl,gd_scgl,gd_qdfs,gd_xl,gd_gzms,gd_dlcy,gd_tggn,gd_vcs from v9_cp_gd_data" num="99"}
+                {pc:get sql="select gd_xh,gd_fz,gd_srdy,gd_scdy,gd_srdl,gd_scgl,gd_qdfs,gd_xl,gd_gzms,gd_dlcy,gd_tggn,gd_vcs,gd_pdf from v9_cp_gd_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[gd_xh]}</td>
@@ -311,6 +312,7 @@
                     <td>{$r[gd_dlcy]}</td>
                     <td>{$r[gd_tggn]}</td>
                     <td>{$r[gd_vcs]}</td>
+                    <td>{if $r[gd_pdf]!=''}<a class="v-download" href="{$r[gd_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -318,7 +320,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="12">LED Driver 线性恒流驱动芯片系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">LED Driver 线性恒流驱动芯片系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=28 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -326,7 +328,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select gh_xh,gh_fz,gh_srdy,gh_vod,gh_scdy,gh_scdl,gh_qdfs,gh_scgl,gh_xl,gh_fkdy,gh_tggn from v9_cp_gh_data" num="99"}
+                {pc:get sql="select gh_xh,gh_fz,gh_srdy,gh_vod,gh_scdy,gh_scdl,gh_qdfs,gh_scgl,gh_xl,gh_fkdy,gh_tggn,gh_pdf from v9_cp_gh_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[gh_xh]}</td>
@@ -340,6 +342,7 @@
                     <td>{$r[gh_xl]}</td>
                     <td>{$r[gh_fkdy]}</td>
                     <td>{$r[gh_tggn]}</td>
+                    <td>{if $r[gh_pdf]!=''}<a class="v-download" href="{$r[gh_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -347,7 +350,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="12">LED Driver DC-DC降压恒流专用IC系列：多功能LED手电筒专用芯片</th></tr>
+                <tr class="vli-stit"><th colspan="13">LED Driver DC-DC降压恒流专用IC系列：多功能LED手电筒专用芯片</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=29 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -355,7 +358,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select ge_xh,ge_fz,ge_srdy,ge_scdy,ge_scdl,ge_scgl,ge_qdfs,ge_xl,ge_gzms,ge_dlcy,ge_tgfs from v9_cp_ge_data" num="99"}
+                {pc:get sql="select ge_xh,ge_fz,ge_srdy,ge_scdy,ge_scdl,ge_scgl,ge_qdfs,ge_xl,ge_gzms,ge_dlcy,ge_tgfs,ge_pdf from v9_cp_ge_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[ge_xh]}</td>
@@ -369,6 +372,7 @@
                     <td>{$r[ge_gzms]}</td>
                     <td>{$r[ge_dlcy]}</td>
                     <td>{$r[ge_tgfs]}</td>
+                    <td>{if $r[ge_pdf]!=''}<a class="v-download" href="{$r[ge_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -380,7 +384,7 @@
             <div class="vli-tit" id="m43">欧创芯中低压DCDC恒压芯片</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="12">DC-DC降压恒压系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">DC-DC降压恒压系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=30 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -388,7 +392,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select ha_xh,ha_fz,ha_srdy,ha_scdy,ha_scdl,ha_scgl,ha_qdfs,ha_xl,ha_gzms,ha_gzjg,ha_jtdl,ha_vfb from v9_cp_ha_data" num="99"}
+                {pc:get sql="select ha_xh,ha_fz,ha_srdy,ha_scdy,ha_scdl,ha_scgl,ha_qdfs,ha_xl,ha_gzms,ha_gzjg,ha_jtdl,ha_vfb,ha_pdf from v9_cp_ha_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[ha_xh]}</td>
@@ -403,6 +407,7 @@
                     <td>{$r[ha_gzjg]}</td>
                     <td>{$r[ha_jtdl]}</td>
                     <td>{$r[ha_vfb]}</td>
+                    <td>{if $r[ha_pdf]!=''}<a class="v-download" href="{$r[ha_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -410,7 +415,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="12">DC-DC升压恒压系列</th></tr>
+                <tr class="vli-stit"><th colspan="13">DC-DC升压恒压系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=31 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -418,7 +423,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select hb_xh,hb_fz,hb_srdy,hb_scdy,hb_scdl,hb_scgl,hb_qdfs,hb_xl,hb_gzms,hb_fkdy,hb_jtdl from v9_cp_hb_data" num="99"}
+                {pc:get sql="select hb_xh,hb_fz,hb_srdy,hb_scdy,hb_scdl,hb_scgl,hb_qdfs,hb_xl,hb_gzms,hb_fkdy,hb_jtdl,hb_pdf from v9_cp_hb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[hb_xh]}</td>
@@ -432,6 +437,7 @@
                     <td>{$r[hb_gzms]}</td>
                     <td>{$r[hb_fkdy]}</td>
                     <td>{$r[hb_jtdl]}</td>
+                    <td>{if $r[hb_pdf]!=''}<a class="v-download" href="{$r[hb_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -439,7 +445,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="11">超低功耗DC-DC 升压恒压系列</th></tr>
+                <tr class="vli-stit"><th colspan="12">超低功耗DC-DC 升压恒压系列</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=33 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -447,7 +453,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select hc_xh,hc_fz,hc_srdy,hc_scdy,hc_scfz,hc_tggn,hc_tbyb,hc_xl,hc_djgh,hc_scdywb,hc_scdyjd from v9_cp_hc_data" num="99"}
+                {pc:get sql="select hc_xh,hc_fz,hc_srdy,hc_scdy,hc_scfz,hc_tggn,hc_tbyb,hc_xl,hc_djgh,hc_scdywb,hc_scdyjd,hc_pdf from v9_cp_hc_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[hc_xh]}</td>
@@ -461,6 +467,7 @@
                     <td>{$r[hc_djgh]}</td>
                     <td>{$r[hc_scdywb]}</td>
                     <td>{$r[hc_scdyjd]}</td>
+                    <td>{if $r[hc_pdf]!=''}<a class="v-download" href="{$r[hc_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -473,7 +480,7 @@
             <div class="vli-tit" id="m42">欧创芯线性稳压器</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="12">低功耗高耐压电压稳压器</th></tr>
+                <tr class="vli-stit"><th colspan="13">低功耗高耐压电压稳压器</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=34 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -481,7 +488,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select i_xh,i_fz,i_srdy,i_scdy,i_dtyj,i_scdl,i_jtdl,i_psrr,i_bhgn,i_scdywb,i_scdyjd from v9_cp_i_data" num="99"}
+                {pc:get sql="select i_xh,i_fz,i_srdy,i_scdy,i_dtyj,i_scdl,i_jtdl,i_psrr,i_bhgn,i_scdywb,i_scdyjd,i_pdf from v9_cp_i_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[i_xh]}</td>
@@ -495,6 +502,7 @@
                     <td>{$r[i_bhgn]}</td>
                     <td>{$r[i_scdywb]}</td>
                     <td>{$r[i_scdyjd]}</td>
+                    <td>{if $r[i_pdf]!=''}<a class="v-download" href="{$r[i_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -507,7 +515,7 @@
             <div class="vli-tit" id="m40">欧创芯功率管驱动器</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="11">功率管驱动器</th></tr>
+                <tr class="vli-stit"><th colspan="12">功率管驱动器</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=35 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -515,7 +523,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select j_xh,j_fz,j_srdy,j_bst,j_sssj,j_xjsj,j_snkq,j_sngd,j_ycsj,j_snkz,j_qdfs from v9_cp_j_data" num="99"}
+                {pc:get sql="select j_xh,j_fz,j_srdy,j_bst,j_sssj,j_xjsj,j_snkq,j_sngd,j_ycsj,j_snkz,j_qdfs,j_pdf from v9_cp_j_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[j_xh]}</td>
@@ -529,6 +537,7 @@
                     <td>{$r[j_ycsj]}</td>
                     <td>{$r[j_snkz]}</td>
                     <td>{$r[j_qdfs]}</td>
+                    <td>{if $r[j_pdf]!=''}<a class="v-download" href="{$r[j_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -536,7 +545,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px;">
-                <tr class="vli-stit"><th colspan="11">3.6A 刷式直流电机驱动器</th></tr>
+                <tr class="vli-stit"><th colspan="12">3.6A 刷式直流电机驱动器</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=36 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -544,7 +553,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select jb_xh,jb_fz,jb_srdy,jb_tds,jb_fzdl,jb_rdson,jb_qybh,jb_gwbh,jb_dlbh,jb_snkz,jb_qdfs from v9_cp_jb_data" num="99"}
+                {pc:get sql="select jb_xh,jb_fz,jb_srdy,jb_tds,jb_fzdl,jb_rdson,jb_qybh,jb_gwbh,jb_dlbh,jb_snkz,jb_qdfs,jb_pdf from v9_cp_jb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[jb_xh]}</td>
@@ -558,6 +567,7 @@
                     <td>{$r[jb_dlbh]}</td>
                     <td>{$r[jb_snkz]}</td>
                     <td>{$r[jb_qdfs]}</td>
+                    <td>{if $r[jb_pdf]!=''}<a class="v-download" href="{$r[jb_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -569,7 +579,7 @@
             <div class="vli-tit" id="m39">欧创芯触摸芯片</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="9">单按键触摸检测芯片</th></tr>
+                <tr class="vli-stit"><th colspan="10">单按键触摸检测芯片</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=37 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -577,7 +587,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select k_xh,k_fz,k_srdy,k_djdl,k_tds,k_scsj,k_scyj,k_scms,k_lmd from v9_cp_k_data" num="99"}
+                {pc:get sql="select k_xh,k_fz,k_srdy,k_djdl,k_tds,k_scsj,k_scyj,k_scms,k_lmd,k_pdf from v9_cp_k_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[k_xh]}</td>
@@ -589,6 +599,7 @@
                     <td>{$r[k_scyj]}</td>
                     <td>{$r[k_scms]}</td>
                     <td>{$r[k_lmd]}</td>
+                    <td>{if $r[k_pdf]!=''}<a class="v-download" href="{$r[k_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -600,7 +611,7 @@
             <div class="vli-tit" id="m50">欧创芯电芯保护IC/MCU</div>
             <div class="v-wrap">
             <table class="v-table">
-                <tr class="vli-stit"><th colspan="10">电芯保护IC</th></tr>
+                <tr class="vli-stit"><th colspan="11">电芯保护IC</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=48 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -608,7 +619,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select l_xh,l_fz,l_srdy,l_djdl,l_gzdl,l_rdson,l_gfdl,l_gfdy,l_gfdsf,l_gwbh from v9_pc_l_data" num="99"}
+                {pc:get sql="select l_xh,l_fz,l_srdy,l_djdl,l_gzdl,l_rdson,l_gfdl,l_gfdy,l_gfdsf,l_gwbh,l_pdf from v9_pc_l_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[l_xh]}</td>
@@ -621,6 +632,7 @@
                     <td>{$r[l_gfdy]}</td>
                     <td>{$r[l_gfdsf]}</td>
                     <td>{$r[l_gwbh]}</td>
+                    <td>{if $r[l_pdf]!=''}<a class="v-download" href="{$r[l_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}
@@ -628,7 +640,7 @@
             </div>
             <div class="v-wrap">
             <table class="v-table" style="margin-top: 10px">
-                <tr class="vli-stit"><th colspan="11">8位MCU</th></tr>
+                <tr class="vli-stit"><th colspan="12">8位MCU</th></tr>
                 <tr class="v-thead">
                     {pc:get sql="select name from v9_model_field where modelid=49 and listorder<99 and listorder>0 order by listorder"}
                     {loop $data $r}
@@ -636,7 +648,7 @@
                     {/loop}
                     {/pc}
                 </tr>
-                {pc:get sql="select lb_xh,lb_fz,lb_gzdyfw,lb_ccq,lb_sjcl,lb_io,lb_yxsd,lb_kmg,lb_fwgn,lb_jtdl,lb_gzdl from v9_pc_lb_data" num="99"}
+                {pc:get sql="select lb_xh,lb_fz,lb_gzdyfw,lb_ccq,lb_sjcl,lb_io,lb_yxsd,lb_kmg,lb_fwgn,lb_jtdl,lb_gzdl,lb_pdf from v9_pc_lb_data" num="99"}
                 {loop $data $r}
                 <tr class="v-tbody">
                     <td>{$r[lb_xh]}</td>
@@ -650,6 +662,7 @@
                     <td>{$r[lb_fwgn]}</td>
                     <td>{$r[lb_jtdl]}</td>
                     <td>{$r[lb_gzdl]}</td>
+                    <td>{if $r[lb_pdf]!=''}<a class="v-download" href="{$r[lb_pdf]}" download>下载</a>{else}-{/if}</td>
                 </tr>
                 {/loop}
                 {/pc}

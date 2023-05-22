@@ -120,3 +120,24 @@
     vertical-align: super;
     font-size: smaller;
 }
+.v-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    min-width: 110px;
+}
+.v-download:before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon_d.png") no-repeat center center / 100% 100%;
+    margin-right: 6px;
+}
+.v-download:hover{
+    color: #1A84C8;
+}
+.v-download:hover:before{
+    background: url("../img/icon_dh.png") no-repeat center center / 100% 100%;
+}
